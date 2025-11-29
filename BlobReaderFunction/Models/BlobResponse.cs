@@ -6,7 +6,7 @@ namespace BlobReaderFunction.Models;
 public class BlobResponse
 {
     /// <summary>
-    /// Status of the operation: "Success" or "Error"
+    /// Status of the operation: "Success", "PartialSuccess", or "Error"
     /// </summary>
     public string Status { get; set; } = string.Empty;
 
@@ -21,7 +21,22 @@ public class BlobResponse
     public string FolderPath { get; set; } = string.Empty;
 
     /// <summary>
-    /// Number of files found in the folder
+    /// Number of files found in the blob folder
     /// </summary>
     public int FilesCount { get; set; }
+
+    /// <summary>
+    /// Number of files successfully copied to SharePoint
+    /// </summary>
+    public int FilesProcessed { get; set; }
+
+    /// <summary>
+    /// Number of files that failed to copy
+    /// </summary>
+    public int FilesFailed { get; set; }
+
+    /// <summary>
+    /// List of files that failed to copy with error messages
+    /// </summary>
+    public List<FileProcessingResult> FailedFiles { get; set; } = new List<FileProcessingResult>();
 }

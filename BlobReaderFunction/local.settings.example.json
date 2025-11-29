@@ -4,6 +4,11 @@
         "AzureWebJobsStorage": "UseDevelopmentStorage=true",
         "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
         "AzureBlobStorage__ConnectionString": "DefaultEndpointsProtocol=https;AccountName=YOUR_ACCOUNT;AccountKey=YOUR_KEY;EndpointSuffix=core.usgovcloudapi.net",
-        "AzureBlobStorage__ContainerName": "your-container-name"
+        "AzureBlobStorage__ContainerName": "your-container-name",
+        "SharePoint__SiteUrl": "https://yourcompany.sharepoint.com/sites/YourSite",
+        "SharePoint__DocumentLibrary": "Documents",
+        "SharePoint__ClientId": "your-app-registration-client-id",
+        "SharePoint__ClientSecret": "your-app-registration-client-secret",
+        "SharePoint__TenantId": "your-azure-ad-tenant-id"
     }
 }
